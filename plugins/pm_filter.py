@@ -856,7 +856,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             typed = query.message.reply_to_message.from_user.id
         except:
             typed = query.from_user.id
-        ident, file_id = query.data.split("#")
+#        ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
         if not files_:
             return await query.answer('Nᴏ sᴜᴄʜ ғɪʟᴇ ᴇxɪsᴛ.')
